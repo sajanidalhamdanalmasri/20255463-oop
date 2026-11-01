@@ -1,0 +1,68 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package javaapplication253;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Student
+ */
+public class CashRegister {
+    private int itemCount;
+    private double totalPrise;
+    
+public CashRegister (){
+   itemCount=0;
+    totalPrise=0.0;
+}
+public  CashRegister(int itemCount ,  double totalePrise ){
+    this. itemCount= itemCount;
+    this. totalPrise= totalePrise;
+}
+public void addItem (double prise){
+    itemCount++;
+    totalPrise+=prise;
+}
+public void clear(){
+    itemCount=0;
+      totalPrise=0.0;
+}
+public int getItemCount(){
+    return itemCount;
+}
+public double getTotalPrice(){
+    return totalPrise;
+}
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        CashRegister register=new CashRegister();
+        System.out.print("item1");
+        double price1=input.nextDouble();
+                register.addItem(price1);
+
+        System.out.print("item2");
+        double price2=input.nextDouble();
+        register.addItem(price2);
+        
+        System.out.println("count is"+register.getItemCount());
+        System.out.println("total is"+ register.getTotalPrice());
+        register.clear();
+        System.out.printf("clear");
+        
+        
+        
+        
+
+        // TODO code application logic here
+    }
+    
+}
