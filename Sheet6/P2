@@ -1,0 +1,51 @@
+public class Rectangle {
+    // A) private fields with default value 1
+    private double width = 1;
+    private double length = 1;
+
+    // B) no-arg constructor
+    public Rectangle() {
+    }
+
+    // C) constructor with specified length and width
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    // D) area
+    public double getArea() {
+        return length * width;
+    }
+
+    // E) perimeter
+    public double getPerimeter() {
+        return 2 * (length + width);
+    }
+
+    public double getLength() {
+        return length;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    // Test program
+    public static void main(String[] args) {
+        Rectangle r1 = new Rectangle();
+        Rectangle r2 = new Rectangle(5, 10);
+
+        System.out.println("Results of the first Object");
+        System.out.println("The length = " + r1.getLength());
+        System.out.println("The width = " + r1.getWidth());
+        System.out.println("Area = " + r1.getArea() + " Perimeter = " + r1.getPerimeter());
+
+        System.out.println();
+
+        System.out.println("Results of the Second Object");
+        System.out.println("The length = " + r2.getLength());
+        System.out.println("The width = " + r2.getWidth());
+        System.out.println("Area = " + r2.getArea() + " Perimeter = " + r2.getPerimeter());
+    }
+}
